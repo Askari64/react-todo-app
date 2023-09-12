@@ -46,7 +46,7 @@ function Enlist() {
   }, [localStorage, clicked]);
 
   return (
-    <div className="flex flex-col items-center justify-start min-h-screen bg-gray-100 pt-20 pb-4">
+    <div className="flex flex-col items-center justify-start min-h-screen bg-gray-100 pt-20 pb-4 px-4 sm:px-0">
       <div className="w-full max-w-md">
         <label className="block text-gray-700 text-sm font-bold mb-2">Todo Item:</label>
         <div className="flex items-center">
@@ -67,7 +67,7 @@ function Enlist() {
             Add
           </button>
         </div>
-        <ul className="mt-4 space-y-4">
+        <ul className="mt-4 space-y-4 overflow-auto max-h-[calc(100vh-12rem)] scroll-smooth">
           {items.map((item) => (
             <li key={item.key} className="bg-white p-4 rounded shadow mb-4">
               <h3 className="text-lg font-semibold truncate text-black">{item.value}</h3>
